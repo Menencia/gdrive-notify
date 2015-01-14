@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "GDrive notify",
+  "version": "0.1.0",
+  "description": "",
+  "browser_action": {
+    "default_title": "FF7e notify",
+    "default_icon": "img/icon16.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "img/icon128.png"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "permissions": [
+    "https://www.googleapis.com/*"
+  ]
+}

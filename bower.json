@@ -1,0 +1,21 @@
+{
+  "name": "gdrive-notify",
+  "version": "0.1.0",
+  "authors": [
+    "Menencia <menencia@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "angular-route": "~1.3.8",
+    "lodash": "~2.4.1",
+    "moment": "~2.9.0"
+  }
+}

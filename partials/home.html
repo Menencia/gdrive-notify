@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th>Date de<br />modification</th>
+    <th>Date de<br />vérification</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr ng-repeat="file in app.files" class="file">
+    <td>{{file.title}}</td>
+    <td>{{file.lastModifyingUserName}}</td>
+    <td>{{file.modifiedDate|moment}}</td>
+    <td>{{file.lastCheck|moment}}</td>
+    <td class="action blue" ng-click="file.update()">UPDATE</td>
+    <td class="action red" ng-click="app.remove(file)">x</td>
+  </tr>
+</table>

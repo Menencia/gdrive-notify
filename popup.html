@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="gdrive-notify" ng-csp>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="revisit-after" content="7 days"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"/>
+
+    <title>GDrive Notify</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body ng-controller="IndexCtrl">
+
+<header>
+
+<div>GDrive Notify</div>
+
+<nav>
+  <ul>
+    <li ng-click="goHome();" class="action blue">Home</li>
+    <li ng-click="goAdd();" class="action blue">Add</li>
+    <li ng-click="goKey();" class="action blue">Key</li>
+  </ul>
+</nav>
+
+</header>
+
+<div ng-view></div>
+
+<footer></footer>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="bower_components/moment/locale/fr.js"></script>
+<script src="file.js"></script>
+<script src="controllers.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
