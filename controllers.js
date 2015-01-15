@@ -40,7 +40,24 @@ app.config(['$routeProvider', function($routeProvider) {
 
 app.filter('moment', function() {
   return function(date) {
-    return moment(date).fromNow();
+    var txt = '';
+    var time = Math.floor(new Date(date).getTime() / 1000);
+    var now = Math.floor(_.now() / 1000);
+
+    var ago = now - time;
+    if (ago < 60) return Math.floor(ago) + 's'
+
+    ago /= 60;
+    if (ago < 60) return Math.floor(ago) + 'm';
+
+    ago /= 60;
+    if (ago < 24) return Math.floor(ago) + 'h';
+
+    ago /= 24;
+    if (ago < 30) return Math.floor(ago) + 'months';
+
+    ago /= 365;
+    return ago + 'years';
   };
 });
 

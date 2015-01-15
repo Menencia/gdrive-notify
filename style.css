@@ -1,9 +1,12 @@
 body {
   width: 400px;
+  color: #444;
 }
 
 header > div {
-  display: inline-block;
+  background-color: #444;
+  color: #fff;
+  padding: 3px;
 }
 
 nav ul {
@@ -14,6 +17,25 @@ nav ul {
 
 nav ul li {
   display: inline-block;
+}
+
+.view {
+  margin: 10px 0;
+}
+
+.action {
+  padding: 3px;
+  color: #444;
+}
+
+.action:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.action.active {
+  background-color: #444;
+  color: #fff;
 }
 
 footer {
@@ -27,13 +49,12 @@ table {
   width: 100%;
 }
 
-.action {
-  border-bottom: 1px dotted #fff;
+.fa {
   cursor: pointer;
 }
 
-.action:hover {
-  border-bottom: 1px dotted #900;
+.fa:hover {
+  text-shadow: 0 0 7px rgba(0,0,0, 0.5);
 }
 
 .blue {

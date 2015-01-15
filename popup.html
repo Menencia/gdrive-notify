@@ -10,25 +10,26 @@
     <title>GDrive Notify</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body ng-controller="IndexCtrl">
 
 <header>
 
-<div>GDrive Notify</div>
+<div><strong>GDrive Notify</strong> by Menencia</div>
 
 <nav>
   <ul>
-    <li ng-click="goHome();" class="action blue">Home</li>
-    <li ng-click="goAdd();" class="action blue">Add</li>
-    <li ng-click="goKey();" class="action blue">Key</li>
+    <li ng-click="goHome();" class="action" ng-class="{active: isActive('/home')}"><i class="fa fa-home"></i> Home</li>
+    <li ng-click="goAdd();" class="action" ng-class="{active: isActive('/add')}"><i class="fa fa-plus"></i> Add</li>
+    <li ng-click="goKey();" class="action" ng-class="{active: isActive('/key')}"><i class="fa fa-key"></i> Key</li>
   </ul>
 </nav>
 
 </header>
 
-<div ng-view></div>
+<div ng-view class="view"></div>
 
 <footer></footer>
 
@@ -36,8 +37,6 @@
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/lodash/dist/lodash.min.js"></script>
-<script src="bower_components/moment/min/moment.min.js"></script>
-<script src="bower_components/moment/locale/fr.js"></script>
 <script src="file.js"></script>
 <script src="controllers.js"></script>
 <script src="app.js"></script>

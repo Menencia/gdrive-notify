@@ -6,8 +6,6 @@ var App = function($rootScope, $http, $timeout, $location) {
 
   this.$rootScope.app = this;
 
-  moment.locale('fr');
-
   this.files = [];
   this.fileId = '';
 
