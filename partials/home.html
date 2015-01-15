@@ -1,6 +1,7 @@
 <table>
   <tr>
     <th></th>
+    <th>Fichier</th>
     <th></th>
     <th>modif</th>
     <th>vérif</th>
@@ -8,10 +9,11 @@
     <th></th>
   </tr>
   <tr ng-repeat="file in app.files" class="file">
+    <td><i class="fa" ng-class="{'fa-star': file.star, 'fa-star-o': !file.star}" ng-click="app.toggleStar(file)"></i></td>
     <td>{{file.title}}</td>
     <td>{{file.lastModifyingUserName}}</td>
-    <td>{{file.modifiedDate|moment}}</td>
-    <td>{{file.lastCheck|moment}}</td>
+    <td>{{file.modifFromNow()}}</td>
+    <td>{{file.verifFromNow()}}</td>
     <td><i class="fa fa-refresh blue" ng-click="file.update()"></i></td>
     <td><i class="fa fa-times red" ng-click="app.remove(file)"></i></td>
   </tr>

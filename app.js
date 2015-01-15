@@ -34,6 +34,26 @@ App.prototype.remove = function(file) {
 };
 
 /**
+ * Toogle star on a file
+ * @param {File} file
+ */
+App.prototype.toggleStar = function(file) {
+  var star = file.star;
+  for (var i in this.files) {
+    this.files[i].star = false;
+  }
+  file.star = !star;
+  if (file.star) {
+    file.notify();
+  } else {
+    chrome.browserAction.setBadgeText({
+      text: ''
+    });
+  }
+  this.saveFiles();
+};
+
+/**
  * Load key
  */
 App.prototype.loadKey = function() {
